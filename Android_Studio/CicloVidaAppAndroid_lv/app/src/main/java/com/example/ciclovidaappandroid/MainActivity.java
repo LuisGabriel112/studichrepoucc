@@ -11,11 +11,11 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    protected final String TAG="ESTADOS";
+    protected final String LIFECYCLE_TAG="Lifecycle";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.d(TAG,"onCreate()");
+        Log.d(LIFECYCLE_TAG,"onCreate()");
         EdgeToEdge.enable(this);
         setContentView(R.layout.otro_layout);
 
@@ -24,36 +24,36 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        Log.d(TAG,"onStart()");
+        Log.d(LIFECYCLE_TAG,"onStart()");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        Log.d(TAG,"onResume()");
+        Log.d(LIFECYCLE_TAG,"onResume()");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        Log.d(TAG,"onPause()");
+        Log.d(LIFECYCLE_TAG,"onPause()");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        Log.d(TAG,"onStop()");
+        Log.d(LIFECYCLE_TAG,"onStop()");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.d(TAG,"onDestroy()");
+        Log.d(LIFECYCLE_TAG,"onDestroy()");
     }
 
     @Override
     protected void onRestart() {
         super.onRestart();
-        Log.d(TAG,"onRestart()");
+        Log.d(LIFECYCLE_TAG,"onRestart()");
     }
 }

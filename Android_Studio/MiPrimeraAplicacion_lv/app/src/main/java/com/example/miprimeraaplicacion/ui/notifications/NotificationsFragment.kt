@@ -26,13 +26,13 @@ class NotificationsFragment : Fragment() {
             ViewModelProvider(this).get(NotificationsViewModel::class.java)
 
         _binding = FragmentNotificationsBinding.inflate(inflater, container, false)
-        val root: View = binding.root
+        val rootView: View = binding.root
 
-        val textView: TextView = binding.textNotifications
-        notificationsViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
+        val notificationsTextView: TextView = binding.textNotifications
+        notificationsViewModel.notificationsText.observe(viewLifecycleOwner) { newText ->
+            notificationsTextView.text = newText
         }
-        return root
+        return rootView
     }
 
     override fun onDestroyView() {

@@ -26,13 +26,13 @@ class DashboardFragment : Fragment() {
             ViewModelProvider(this).get(DashboardViewModel::class.java)
 
         _binding = FragmentDashboardBinding.inflate(inflater, container, false)
-        val root: View = binding.root
+        val rootView: View = binding.root
 
-        val textView: TextView = binding.textDashboard
-        dashboardViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
+        val dashboardTextView: TextView = binding.textDashboard
+        dashboardViewModel.dashboardText.observe(viewLifecycleOwner) { newText ->
+            dashboardTextView.text = newText
         }
-        return root
+        return rootView
     }
 
     override fun onDestroyView() {

@@ -12,8 +12,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    ImageView imagenAnimada;
-    AnimationDrawable animarGatito;
+    ImageView animatedImageView;
+    AnimationDrawable kittenAnimation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,10 +21,10 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        imagenAnimada=findViewById(R.id.animation_container);
-        imagenAnimada.setBackgroundResource(R.drawable.gatito_anime);
-        animarGatito=(AnimationDrawable) imagenAnimada.getBackground();
-        animarGatito.run();
+        animatedImageView=findViewById(R.id.animation_container);
+        animatedImageView.setBackgroundResource(R.drawable.gatito_anime);
+        kittenAnimation=(AnimationDrawable) animatedImageView.getBackground();
+        kittenAnimation.run();
 
 
     }
